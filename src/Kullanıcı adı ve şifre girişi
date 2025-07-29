@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Kullanicigirisi {
+    public static void main(String[] args) {
+        System.out.println("Kullanıcı verilerinizi giriniz.");
+        Scanner imp = new Scanner(System.in);
+        System.out.println("Kullanıcı adınızı giriniz:");
+        String kullaniciAdi = imp.nextLine();
+        System.out.println("Şifrenizi giriniz:");
+        String sifre = imp.nextLine();
+        if (kullaniciAdi.equals("admin") && sifre.equals("12345")) {
+            System.out.println("Giriş başarılı. Hoş geldiniz!");
+        } else if (kullaniciAdi.equals("admin") && !sifre.equals("123451")){
+            System.out.println("Şifre değiştirmek ister mısınız? (Evet/Hayır)");
+            String cevap = imp.nextLine();
+            switch (cevap.toLowerCase()) {
+                case "evet":
+                    System.out.println("Yeni şifrenizi giriniz:");
+                    String yeniSifre = imp.nextLine();
+                    if (yeniSifre.equals("12345")) {
+                        System.out.println("Yeni şifre eski şifre ile aynı olamaz. Lütfen farklı bir şifre giriniz.");
+                    } else {
+                        System.out.println("Şifreniz başarıyla değiştirildi.");
+                    }
+                    break;
+                case "hayir":
+                    System.out.println("Şifre değişikliği iptal edildi.");
+                    break;
+                default:
+                    System.out.println("Geçersiz cevap. Lütfen 'Evet' veya 'Hayır' giriniz.");
+                    break;  }
+        }
+        else {
+            System.out.println("Kullanıcı adı veya şifre yanlış. Lütfen tekrar deneyiniz.");
+        }
+    }
+}
