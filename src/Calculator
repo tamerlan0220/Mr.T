@@ -1,1 +1,33 @@
-
+import java.util.Scanner;
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("İlk sayi giriniz:");
+        int n1 = scanner.nextInt();
+        System.out.println("İkinci sayi giriniz:"); 
+        int n2 = scanner.nextInt();
+        System.out.println("Yapmak istediğiniz işlemi seçiniz: \n1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme");
+        int secim = scanner.nextInt();
+        switch (secim) {
+            case 1:
+                System.out.println("Sonuç: " + (n1 + n2));
+                break;
+            case 2: 
+                System.out.println("Sonuç: " + (n1 - n2));
+                break;
+            case 3:
+                System.out.println("Sonuç: " + (n1 * n2));          
+                break;
+            case 4:      
+                if (n2 != 0) {
+                    System.out.println("Sonuç: " + (n1 / n2));
+                } else {
+                    System.out.println("Bir sayıyı sıfıra bölemezsiniz.");
+                }
+                break;  
+            default:
+                System.out.println("Geçersiz seçim. Lütfen 1, 2, 3 veya 4 giriniz.");
+                break;  
+        }
+    }
+}
