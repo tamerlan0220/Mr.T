@@ -1,0 +1,56 @@
+import java.util.Scanner;
+public class CinZodyagi {
+    public static void main(String[] args) {
+        System.out.println("Çin Zodyağı Hesaplama Programına Hoş Geldiniz!");
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Doğum yılınızı giriniz: ");
+        int yil = scanner.nextInt();
+        
+        int kalan = yil % 12;
+        String zodyakHayvani;
+        
+        switch (kalan) {
+            case 0:
+                zodyakHayvani = "Maymun";
+                break;
+            case 1:
+                zodyakHayvani = "Horoz";
+                break;
+            case 2:
+                zodyakHayvani = "Köpek";
+                break;
+            case 3:
+                zodyakHayvani = "Domuz";
+                break;
+            case 4:
+                zodyakHayvani = "Fare";
+                break;
+            case 5:
+                zodyakHayvani = "Sığır";
+                break;
+            case 6:
+                zodyakHayvani = "Kaplan";
+                break;
+            case 7:
+                zodyakHayvani = "Tavşan";
+                break;
+            case 8:
+                zodyakHayvani = "Ejderha";
+                break;
+            case 9:
+                zodyakHayvani = "Yılan";
+                break;
+            case 10:
+                zodyakHayvani = "At";
+                break;
+            case 11:
+                zodyakHayvani = "Koyun";
+                break;
+            default:
+                zodyakHayvani = "Bilinmeyen";
+        }
+        
+        System.out.println("Çin Zodyağı Hayvanınız: " + zodyakHayvani);
+    }
+}
