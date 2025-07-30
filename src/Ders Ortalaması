@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class DersOrtalamasi {
+    public static void main(String[] args) {
+        System.out.println("Lütfen ders notlarınızı giriniz.");
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Matematik notunuz: ");
+        int matematik = input.nextInt();
+        if (matematik < 0 || matematik > 100) {
+            System.out.println("Matematik notu 0-100 arasında olmalıdır.");
+            return;
+        }
+        System.out.print("Fizik notunuz: ");
+        int fizik = input.nextInt();
+        if (fizik < 0 || fizik > 100) {
+            System.out.println("Fizik notu 0-100 arasında olmalıdır.");
+            return;
+        }   
+        
+        System.out.print("Kimya notunuz: ");
+        int kimya = input.nextInt();
+        if (kimya < 0 || kimya > 100) {
+            System.out.println("Kimya notu 0-100 arasında olmalıdır.");
+            return;
+        }
+        
+        System.out.print("Türkçe notunuz: ");
+        int turkce = input.nextInt();
+        if (turkce < 0 || turkce > 100) {
+            System.out.println("Türkçe notu 0-100 arasında olmalıdır.");
+            return;
+        }
+        
+        System.out.print("Tarih notunuz: ");
+        int tarih = input.nextInt();
+        if (tarih < 0 || tarih > 100) {
+            System.out.println("Tarih notu 0-100 arasında olmalıdır.");
+            return;
+        }
+        
+        double ortalama = (matematik + fizik + kimya + turkce + tarih ) / 5.0;
+        
+        System.out.println("Ders ortalamanız: " + ortalama);
+        
+        if (ortalama >= 60) {
+            System.out.println("Tebrikler, sınıfı geçtiniz!");
+        } else {
+            System.out.println("Üzgünüz, sınıfta kaldınız.");
+        }
+    }
+
+}
